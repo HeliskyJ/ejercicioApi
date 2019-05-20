@@ -15,8 +15,11 @@ ul = (apis +un+"/marcas");
             dataType: "json",
             success: function (data){
                 $("#tabTwo").empty();
+                $("#tabOne").empty();
+                $("#table").empty();
                 $(".bano").empty();
                 $(".ban").empty();
+                $(".bin").empty();
                 $("#table").append("<table border='2'>"+
                 "<thead>"+
                 "<th>Nombre</th>"+
@@ -49,6 +52,7 @@ ul = ul+"/"+a+"/modelos";
             type:"GET",
             dataType: "json",
             success: function (data){
+                $(".bin").empty();
                 $("#tabTwo").empty();
                 $("#tabOne").empty();
                 $("#table").empty();
@@ -82,9 +86,6 @@ ul = ul+"/"+a+"/modelos";
                     $(".ban table").append("<tr>" +
                     "<td>" +data.anos[sum].nome + "</td>"+
                     "<td>" +data.anos[sum].codigo + "</td>"+
-                    "<td id='bonton'><button value='"+data.anos[sum].codigo+
-                    "'onclick='act(this.value)' id='but'>"+
-                    "Año</button></td>" +
                     "</tr></tbody></table>");
                         sum++;
                 }
@@ -104,19 +105,24 @@ ul = ul+"/"+a+"/anos";
             type:"GET",
             dataType: "json",
             success: function (data){
+            $(".bin").empty();
+            $("#tabOne").empty();
             $("#tabTwo").empty();
             $(".bano").empty();
             $(".ban").empty();
-            $("#table").append("<table border='2'>"+
+            $(".bin").append("<table border='2' id='tabTrh'>"+
             "<thead>"+
             "<th>Nombre</th>"+
             "<th>Codigo</th>"+
             "</thead>"+
             "<tbody>");
             $.each(data, function(i, item) {
-                        $("#table table").append("<tr>" +
+                        $(".bin table").append("<tr>" +
                           "<td>" + item.nome + "</td>" +
                           "<td>" + item.codigo + "</td>" +
+                          "<td id='bonton'><button value='"+item.codigo+
+                          "'onclick='mart(this.value)' id='mrt'>"+
+                          "Valor</button></td>" +
                           "</tr></tbody></table>");
             });
         },
