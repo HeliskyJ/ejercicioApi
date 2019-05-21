@@ -2,28 +2,56 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Hello Bulma!</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
         <title>Recetas</title>
     </head>
     <body>
         <div id="transport">
+            <div class="columns is-mobile columns is-desktop">
+            <aside class="column is-2">
+                <div class="boxe is-4">
             <select class="select" name="sect" onchange="valie(this)" id="but">
-                <option disabled="true" selected>-------</option>
+                <option disabled="true" selected>Seleccione el vehiculo</option>
                 <option value="carros">Carros</option>
                 <option value="motos">Motos</option>
                 <option value="caminhoes">Camiones</option>
+            </div>
             </select>
-            <div id="table">
-            </div>
+        </aside>
 
-            <div class="bano">
+        <div class="column i-8">
+            <header class="box title is-size-1 is-spaced">
+                VEHICULOS
+            </header>
+        </div>
             </div>
-
-            <div class="ban">
-                <h1 id="title"></h1>
-            </div>
-
-            <section class="bin">
+            <main class="columns is-mobile columns is-desktop">
+                <div class="column is'8">
+                    <section id="o">
+                            <img src="css/ca.jpg" alt="">
+                    </section>
+            <section  id="table">
             </section>
+
+            <section class="bano" id="a">
+            </section>
+
+            <section class="ban" id="a">
+                <h1 id="title"></h1>
+            </section>
+
+            <section class="bin" id="a">
+            </section>
+
+            <section class="bon" id="a">
+            </section>
+            </div>
+        </main>
+        </div>
         <script
           src="https://code.jquery.com/jquery-3.4.1.js"
           integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
